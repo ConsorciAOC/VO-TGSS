@@ -181,3 +181,9 @@ El servei permet no informar el rang de dates però en cas que de s’informi, r
 | DNI | 080979388E | Des de 2009-05-01 | |
 | DNI | 002223762F | Des de 2000-01-01 al 2011-08-01 | IPF Duplicat |
 
+## Annexes
+
+### Peticions d'exemple
+
+[Peticions i respostes d'exemple.] (https://github.com/ConsorciAOC/VO-TGSS/tree/main/Peticions%20d'exemple)
+
