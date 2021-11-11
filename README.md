@@ -35,7 +35,7 @@ Aquesta modalitat no requereix informar dades específiques.
 #### 3.1.2 Resposta – dades específiques
 De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a continuació.
 
-**(Introducir imagen)**
+![Resposta Dades Específiques](https://github.com/ConsorciAOC/VO-TGSS/blob/main/images/resposta%20dades%20especifiques.png)
 
 | Element | Descripció |
 |---|---|
@@ -72,7 +72,7 @@ Aquests són alguns dels titulars amb els quals es pot provar en l’entorn de p
 
 ### 3.2 Alta laboral a data concreta (Q2827003ATGSS006)
 
-**(Introducir imagen)**
+![3.2 Alta laboral a data concreta](https://github.com/ConsorciAOC/VO-TGSS/blob/main/images/3.2%20Alta%20laboral%20a%20data%20concreta%20(Q2827003ATGSS006).png)
 
 #### 3.2.1 Petició
 ##### 3.2.1.1 Dades genèriques
@@ -138,8 +138,46 @@ El sistema composa l’identificador de persona física (IPF) que es transmet a 
 | DatosEspecificos/Fecha_Desde | Camp opcional que conté el mes i any d’inici per un període determinat (AAAAMM). |
 | DatosEspecificos/Fecha_Hasta | Camp opcional que conté el mes i any de fi per un període determinat (AAAAMM). |
 
-**(Introducir imagen)**
+![3.3.1.2 Dades específiques](https://github.com/ConsorciAOC/VO-TGSS/blob/main/images/3.3.1.2%20Dades%20espec%C3%ADfiques.png)
 
 El servei retorna 100 situacions com a màxim per a un determinat rang de dates. Així, en cas que en el període sol·licitat hi hagi més de 100 situacions caldrà reduïr el rang de sol·licitud.
-El servei permet no informar el rang de dates però en cas que de s’informi, requereix els dos llindars (Fecha_Desde i Fecha_Hasta). 
+El servei permet no informar el rang de dates però en cas que de s’informi, requereix els dos llindars (Fecha_Desde i Fecha_Hasta).
+
+#### 3.3.2 Resposta – dades específiques
+| Element | Descripció |
+|---|---|
+| DatosEspecificos/IPF | Identificació de la persona física. Numèric d’onze posicions sent el primer dígit el tipus de documentació (1 per DNI, 6 per NIE i 7 per passaport) seguit de la documentació. |
+| DatosEspecificos/Fecha_Desde | Camp opcional que conté el mes i any de fi per un període determinat (AAAAMM). |
+| DatosEspecificos/Fecha_Hasta | Camp opcional que conté el mes i any d’inici per un període determinat (AAAAMM). |
+| DatosEspecificos/Retorno/Codigo | Codi de resultat de la consulta (vegeu apartat 3.2.2.1.) |
+| DatosEspecificos/Retorno/Descripcion | Literal de la resposta. |
+| DatosEspecificos/Situaciones/SITUACION | Bloc de dades corresponent a les dades d’una situació. |
+| /SITUACION/NORMALIZACION | Indica si està normalitzat el camp nom i cognoms (1: no normalitzat, 2: normalizado)|
+| //SITUACION/NOMBRE | Nom. |
+| //SITUACION/NAF | Numero d’afiliació sobre el que s’informa la situació. |
+| //SITUACION/REGIMEN | Literal del Régimen de Seguridad Social. |
+| //SITUACION/CNAE | Activitat económica. |
+| //SITUACION/FECHA_REAL_ALTA | Data d’inici de l’activitat laboral (AAAAMMDD). |
+| //SITUACION/FECHA_EFECTO_ALTA | Data en que es produeixen els efectes de l’alta (AAAAMMDD). |
+| //SITUACION/FECHA_REAL_BAJA |Data de finalizació de l’activitat laboral (AAAAMMDD). |
+| //SITUACION/FECHA_EFECTO_BAJA | Data en que es produeixen els efectes de la baixa (AAAAMMDD). |
+
+##### 3.3.2.1 Codis de resultat
+* 0000: Operació correcta.
+* 0001: No hi ha dades enregistrades per al període sol·licitat.
+* 0002: IPF erroni.
+* 0003: IPF inexistent en la base de dades de Seguridad Social.
+* 0004: IPF està duplicat en la base de dades de Seguridad Social.
+* 0005: El format de la data de petició és incorrecte.
+* 0006: Existeixen més dades en el rang de dates indicat. Redueixi el rang.
+* 0502: Error realizant la consulta.
+
+#### 3.3.3 Joc de proves
+
+| Tipus documentació  | Documentació | Dates | Resultat |
+|---|---|---|---|
+| DNI | 007177097Q | Des de 1971-01-01 al 1971-01-31 | |
+| DNI | 007177097Q | Des de 2010-08-01 | |
+| DNI | 080979388E | Des de 2009-05-01 | |
+| DNI | 002223762F | Des de 2000-01-01 al 2011-08-01 | IPF Duplicat |
 
