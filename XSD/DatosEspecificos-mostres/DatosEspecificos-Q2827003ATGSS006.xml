@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatosEspecificos xmlns="http://www.tgss.es/altafecha/esquemas/afiliacion/datosespecificos">
+	<IPF>aaaaaaaaaaa</IPF>
+	<FECHA>aaaaaaaa</FECHA>
+	<Retorno>
+		<Codigo>aaaa</Codigo>
+		<Descripcion>String</Descripcion>
+	</Retorno>
+</DatosEspecificos>

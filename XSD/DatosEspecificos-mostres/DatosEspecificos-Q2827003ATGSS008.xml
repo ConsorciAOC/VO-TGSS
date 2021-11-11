@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatosEspecificos xmlns="http://www.tgss.es/actividadagraria/esquemas/afiliacion/datosespecificos">
+	<IPF>aaaaaaaaaaa</IPF>
+	<Fecha_Desde>aaaaaa</Fecha_Desde>
+	<Fecha_Hasta>aaaaaa</Fecha_Hasta>
+	<Retorno>
+		<Codigo>aaaa</Codigo>
+		<Descripcion>String</Descripcion>
+		<SITUACIONES>
+			<SITUACION>
+				<NORMALIZACION>1</NORMALIZACION>
+				<NOMBRE>a</NOMBRE>
+				<NAF>aaaaaaaaaaaa</NAF>
+				<REGIMEN>String</REGIMEN>
+				<CNAE>a</CNAE>
+				<FECHA_REAL_ALTA>String</FECHA_REAL_ALTA>
+				<FECHA_EFECTO_ALTA>String</FECHA_EFECTO_ALTA>
+				<FECHA_REAL_BAJA>String</FECHA_REAL_BAJA>
+				<FECHA_EFECTO_BAJA>String</FECHA_EFECTO_BAJA>
+			</SITUACION>
+		</SITUACIONES>
+	</Retorno>
+</DatosEspecificos>
