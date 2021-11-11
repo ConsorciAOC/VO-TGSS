@@ -185,5 +185,9 @@ El servei permet no informar el rang de dates però en cas que de s’informi, r
 
 ### Peticions d'exemple
 
-[Peticions i respostes d'exemple.] (https://github.com/ConsorciAOC/VO-TGSS/tree/main/Peticions%20d'exemple)
+Peticions i respostes d'exemple:
+
+* [Acreditació jornades agràries (Q2827003ATGSS008)](https://github.com/ConsorciAOC/VO-TGSS/tree/main/Peticions%20d'exemple/Acreditaci%C3%B3%20jornades%20agr%C3%A0ries%20(Q2827003ATGSS008))
+* [Alta laboral a data concreta (Q2827003ATGSS006)](https://github.com/ConsorciAOC/VO-TGSS/tree/main/Peticions%20d'exemple/Alta%20laboral%20a%20data%20concreta%20(Q2827003ATGSS006))
+* [Situació de deute (Q2827003ATGSS001B)](https://github.com/ConsorciAOC/VO-TGSS/tree/main/Peticions%20d'exemple/Situaci%C3%B3%20de%20deute%20(Q2827003ATGSS001B))
 
