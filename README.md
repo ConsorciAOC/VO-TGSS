@@ -1,10 +1,37 @@
 # VO-TGSS
+
+## INDEX
+
+- [1. Introducció](#1)
+- [2. Transmissions de dades disponibles](#2)
+- [3. Missatgeria del servei](#3)
+   * [3.1 3.1 Situació de deute (Q2827003ATGSS001B)](#3.1)
+        * [3.1.1 3.1.1 Petició](#3.1.1)
+		* [3.1.2 Resposta – dades específiques](#3.1.2)
+		* [3.1.3 Joc de proves](#3.1.3)		
+   * [3.2 Alta laboral a data concreta (Q2827003ATGSS006)](#3.2)
+        * [3.2.1 Petició](#3.2.1)
+		* [3.2.2 Resposta – dades específiques](#3.2.2)
+		* [3.2.3 Joc de proves](#3.2.3)
+   * [3.3 Acreditació de jornades agràries (Q2827003ATGSS008)](#3.3)
+		* [3.3.1 Petició](#3.3.1)
+		* [3.3.2 Resposta – dades específiques](#3.3.2)
+		* [3.3.3 Joc de proves](#3.3.2)
+- [4. Joc de proves](#4)
+
+
+
 ## 1- Introducció
 Aquest document detalla la missatgeria associada al servei de la Tesorería General de la Seguridad
 Social (TGSS en endavant).
+
 Per poder realitzar la integració cal conèixer prèviament la següent documentació:
+
 * Document del Servei Via Oberta.
-* Document de Missatgeria Genèrica de la PCI del Consorci AOC. 
+* [Document de Missatgeria Genèrica de la PCI del Consorci AOC.][PCI]
+
+[PCI]:https://github.com/ConsorciAOC/PCI
+
 
 ## 2- Transmissions de dades disponibles
 Les dades disponibles a través del servei són les que es presenten a continuació:
@@ -17,7 +44,7 @@ Producte: SCSP_TGSS
 | Q2827003ATGSS006 | Alta laboral a data concreta. |
 | Q2827003ATGSS008 | Acreditació de jornades agràries. |
 
-## 3- Missatgeria dels serveis
+## 3- Missatgeria del servei
 A continuació es detalla la missatgeria corresponent al bloc de dades específiques de les modalitats de consum del producte SCSP_TGSS. 
 > La TGSS requereix que s’informin les dades del funcionari que realitza la consulta. Així, cal informar l’element *Funcionario* del bloc de dades genèriques: */Peticion/Funcionario* i *//SolicitudTransmision/DatosGenericos/Solicitante/Funcionario.* 
 
@@ -122,7 +149,7 @@ El sistema composa l’identificador de persona física (IPF) que es transmet a 
 | DNI | 98987630T | IPF duplicat |
 | NIE | X9875775N | alta desde 03012008 a 08032011 |
 
-### 3.3 Adreditació de jornades agràries (Q2827003ATGSS008)
+### 3.3 Acreditació de jornades agràries (Q2827003ATGSS008)
 #### 3.3.1 Petició
 ##### 3.3.1.1 Dades genèriques
 | Element | Descripció |
@@ -191,3 +218,13 @@ Peticions i respostes d'exemple:
 * [Alta laboral a data concreta (Q2827003ATGSS006)](https://github.com/ConsorciAOC/VO-TGSS/tree/main/Peticions%20d'exemple/Alta%20laboral%20a%20data%20concreta%20(Q2827003ATGSS006))
 * [Situació de deute (Q2827003ATGSS001B)](https://github.com/ConsorciAOC/VO-TGSS/tree/main/Peticions%20d'exemple/Situaci%C3%B3%20de%20deute%20(Q2827003ATGSS001B))
 
+# 4 Joc de proves
+
+
+
+L&#39;emissor final publica els següent [joc de proves a l&#39;entorn de pre-producció][proves] 
+
+[proves]: https://administracionelectronica.gob.es/ctt/svd/descargas#.YvOZNXbP2Ul
+![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) En cas de tindre problemes per accedir als jocs de proves, si us plau, obre un tiquet a través del [formulari][form]
+
+[form]:https://www.aoc.cat/portal-suport/peticio-integradors/idservei/integracio/
