@@ -21,7 +21,7 @@
 
 
 
-## 1- Introducció
+## 1- Introducció <a name="1"></a>
 Aquest document detalla la missatgeria associada al servei de la Tesorería General de la Seguridad
 Social (TGSS en endavant).
 
@@ -33,7 +33,7 @@ Per poder realitzar la integració cal conèixer prèviament la següent documen
 [PCI]:https://github.com/ConsorciAOC/PCI
 
 
-## 2- Transmissions de dades disponibles
+## 2- Transmissions de dades disponibles <a name="3"></a>
 Les dades disponibles a través del servei són les que es presenten a continuació:
 Emissor: TGSS (Tesorería General de la Seguridad Social)
 
@@ -44,12 +44,12 @@ Producte: SCSP_TGSS
 | Q2827003ATGSS006 | Alta laboral a data concreta. |
 | Q2827003ATGSS008 | Acreditació de jornades agràries. |
 
-## 3- Missatgeria del servei
+## 3- Missatgeria del servei <a name="3"></a>
 A continuació es detalla la missatgeria corresponent al bloc de dades específiques de les modalitats de consum del producte SCSP_TGSS. 
 > La TGSS requereix que s’informin les dades del funcionari que realitza la consulta. Així, cal informar l’element *Funcionario* del bloc de dades genèriques: */Peticion/Funcionario* i *//SolicitudTransmision/DatosGenericos/Solicitante/Funcionario.* 
 
-### 3.1 Situació de deute (Q2827003ATGSS001B)
-#### 3.1.1 Petició
+### 3.1 Situació de deute (Q2827003ATGSS001B) <a name="3.1"></a>
+#### 3.1.1 Petició <a name="3.1.1"></a>
 ##### 3.1.1.1 Dades genèriques
 | Element | Descripció |
 |---|---|
@@ -59,7 +59,7 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 ##### 3.1.1.2 Dades específiques
 Aquesta modalitat no requereix informar dades específiques.
 
-#### 3.1.2 Resposta – dades específiques
+#### 3.1.2 Resposta – dades específiques <a name="3.1.2"></a>
 De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a continuació.
 
 ![Resposta Dades Específiques](https://github.com/ConsorciAOC/VO-TGSS/blob/main/images/resposta%20dades%20especifiques.png)
@@ -79,7 +79,7 @@ De l’schema associat a la resposta especifica, el servei informa les dades que
 * 0502: Error realizant la consulta.
 * 0401: Format de petició incorrecte (no compleix l’schema).
 
-#### 3.1.3 Joc de proves
+#### 3.1.3 Joc de proves <a name="3.1.3"></a>
 Aquests són alguns dels titulars amb els quals es pot provar en l’entorn de proves de la TGSS (les dades no són reals per aquests casos).
 
 | Tipus documentació | Documentació | Corrent de pagament |
@@ -97,11 +97,11 @@ Aquests són alguns dels titulars amb els quals es pot provar en l’entorn de p
 | Pasaporte | AB20110222 | N |
 | Pasaporte | CA20110333 | NO CONSTA |
 
-### 3.2 Alta laboral a data concreta (Q2827003ATGSS006)
+### 3.2 Alta laboral a data concreta (Q2827003ATGSS006) <a name="3.2"></a>
 
 ![3.2 Alta laboral a data concreta](https://github.com/ConsorciAOC/VO-TGSS/blob/main/images/3.2%20Alta%20laboral%20a%20data%20concreta%20(Q2827003ATGSS006).png)
 
-#### 3.2.1 Petició
+#### 3.2.1 Petició <a name="3.2.1"></a>
 ##### 3.2.1.1 Dades genèriques
 | Element | Descripció |
 |---|---|
@@ -115,7 +115,7 @@ El sistema composa l’identificador de persona física (IPF) que es transmet a 
 |---|---|
 | DatosEspecificos/FECHA | Data que determina la data sobre la que es consulta la situació (DDMMAAAA). |
 
-#### 3.2.2 Resposta – dades específiques 
+#### 3.2.2 Resposta – dades específiques  <a name="3.2.2"></a>
 | Element | Descripció |
 |---|---|
 | DatosEspecificos/IPF | Identificació de la persona física. Numèric d’onze posicions sent el primer dígit el tipus de documentació (1 per DNI, 6 per NIE i 7 per passaport) seguit de la documentació. |
@@ -133,7 +133,7 @@ El sistema composa l’identificador de persona física (IPF) que es transmet a 
 * 0502: Error realizant la consulta.
 * 0401: Format de petició incorrecte (no compleix l’schema).
 
-#### 3.2.3 Joc de proves
+#### 3.2.3 Joc de proves <a name="3.2.3"></a>
 | Tipus documentació | Documentació | Data |
 |---|---|---|
 | DNI | 53208491S | alta desde 07101991 a 06041993 |
@@ -149,8 +149,8 @@ El sistema composa l’identificador de persona física (IPF) que es transmet a 
 | DNI | 98987630T | IPF duplicat |
 | NIE | X9875775N | alta desde 03012008 a 08032011 |
 
-### 3.3 Acreditació de jornades agràries (Q2827003ATGSS008)
-#### 3.3.1 Petició
+### 3.3 Acreditació de jornades agràries (Q2827003ATGSS008) <a name="3.3"></a>
+#### 3.3.1 Petició <a name="3.3.1"></a>
 ##### 3.3.1.1 Dades genèriques
 | Element | Descripció |
 |---|---|
@@ -170,7 +170,7 @@ El sistema composa l’identificador de persona física (IPF) que es transmet a 
 El servei retorna 100 situacions com a màxim per a un determinat rang de dates. Així, en cas que en el període sol·licitat hi hagi més de 100 situacions caldrà reduïr el rang de sol·licitud.
 El servei permet no informar el rang de dates però en cas que de s’informi, requereix els dos llindars (Fecha_Desde i Fecha_Hasta).
 
-#### 3.3.2 Resposta – dades específiques
+#### 3.3.2 Resposta – dades específiques <a name="3.3.2"></a>
 | Element | Descripció |
 |---|---|
 | DatosEspecificos/IPF | Identificació de la persona física. Numèric d’onze posicions sent el primer dígit el tipus de documentació (1 per DNI, 6 per NIE i 7 per passaport) seguit de la documentació. |
@@ -199,7 +199,7 @@ El servei permet no informar el rang de dates però en cas que de s’informi, r
 * 0006: Existeixen més dades en el rang de dates indicat. Redueixi el rang.
 * 0502: Error realizant la consulta.
 
-#### 3.3.3 Joc de proves
+#### 3.3.3 Joc de proves <a name="3.3.3"></a>
 
 | Tipus documentació  | Documentació | Dates | Resultat |
 |---|---|---|---|
@@ -218,7 +218,7 @@ Peticions i respostes d'exemple:
 * [Alta laboral a data concreta (Q2827003ATGSS006)](https://github.com/ConsorciAOC/VO-TGSS/tree/main/Peticions%20d'exemple/Alta%20laboral%20a%20data%20concreta%20(Q2827003ATGSS006))
 * [Situació de deute (Q2827003ATGSS001B)](https://github.com/ConsorciAOC/VO-TGSS/tree/main/Peticions%20d'exemple/Situaci%C3%B3%20de%20deute%20(Q2827003ATGSS001B))
 
-# 4 Joc de proves
+# 4 Joc de proves <a name="4"></a>
 
 
 
